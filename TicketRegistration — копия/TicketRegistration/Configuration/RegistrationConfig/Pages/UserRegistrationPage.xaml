@@ -1,0 +1,54 @@
+﻿<Page x:Class="TicketRegistration.UserRegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TicketRegistration"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="450"
+      Title="RegistrationPage" Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" Margin="0 10 0 0">
+
+            <StackPanel Margin="0 0 10 0">
+                <TextBlock Text="Name" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Name, ValidatesOnDataErrors=True, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                x:Name="NameTxtBx" Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBlock Text="Email" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Email, ValidatesOnDataErrors=True, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                x:Name="EmailTxtBx" Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBlock Text="Login" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Login, ValidatesOnDataErrors=True, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                    x:Name="LoginTxtBx" Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBlock Text="Check Password" Style="{StaticResource TextBlockStyle}"/>
+                <PasswordBox x:Name="CheckPaswPasBx" Height="23" Width="120" Margin="0 0 0 10" HorizontalAlignment="Left"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Surname" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Surname, ValidatesOnDataErrors=True, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                x:Name="SurnameTxtBx" Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBlock Text="Phone" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Phone, ValidatesOnDataErrors=True, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                x:Name="PhoneTxtBx" Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBlock Text="Password" Style="{StaticResource TextBlockStyle}"/>
+                <PasswordBox x:Name="PasswordPasBx" Height="23" Width="120" Margin="0 0 0 10" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+            <Button x:Name="SignInButt" Content="Sign in" Style="{StaticResource ButtonStyle}" Click="SignInButt_Click"/>
+            <Button x:Name="SignUpButt" Content="Sign up" Style="{StaticResource ButtonStyle}" Click="SignUpButt_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Configuration\AdministrationsConfig\Pages\MainAdminPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Configuration\AdministrationsConfig\Pages\AdminManagePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Configuration\RegistrationConfig\Pages\UserAuthorizationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Configuration\RegistrationConfig\Pages\UserRegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Configuration\RegistrationConfig\Pages\VerifyPhonePagexaml.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Configuration\UsersConfig\MainUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Configuration\AdministrationsConfig\Pages\MainAdminPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\AdministrationsConfig\Pages\AdminManagePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\RegistrationConfig\Pages\UserAuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\AdministrationsConfig\Pages\CityRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\AdministrationsConfig\Pages\CountryRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\AdministrationsConfig\Pages\FlightRegistratrionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\AdministrationsConfig\Pages\PlaneRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\RegistrationConfig\Pages\UserRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\RegistrationConfig\Pages\VerifyPhonePagexaml.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\UsersConfig\TicketChoosingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Configuration\UsersConfig\MainUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\PageStyleTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

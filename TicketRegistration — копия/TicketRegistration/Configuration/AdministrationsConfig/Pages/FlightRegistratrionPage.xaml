@@ -1,0 +1,59 @@
+﻿<Page x:Class="TicketRegistration.FlightRegistratrionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:TicketRegistration" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="310" Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="240"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" Margin="0 10 0 0">
+            <StackPanel Margin="0 0 10 0">
+                <TextBlock Text="Departure country" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox Text="{Binding DepartureCountry, ValidatesOnDataErrors=True, UpdateSourceTrigger=Default, NotifyOnValidationError=True}"
+                  x:Name="DepartureCountryCmbBx"  Style="{StaticResource ComboBoxStyle}" DropDownClosed="DepartureCountryCmbBx_SelectionChanged"/>
+
+                <TextBlock Text="Departure city" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox Text="{Binding DepartureCity, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  x:Name="DepartureCityCmbBx" Style="{StaticResource ComboBoxStyle}"/>
+
+                <TextBlock Text="Plane name" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox Text="{Binding PlaneName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  x:Name="PlaneCmbBx" Style="{StaticResource ComboBoxStyle}"/>
+
+                <TextBlock Text="Economy seats price" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding EconomySeatsPrice, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                 x:Name="EconomySeatPriceTxtBx" Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Arrival country" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox Text="{Binding ArrivalCountry, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                    x:Name="ArrivalCountryCmbBx" Style="{StaticResource ComboBoxStyle}" DropDownClosed="ArrivalCountryCmbBx_SelectionChanged"/>
+
+                <TextBlock Text="Arrival city" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox Text="{Binding ArrivalCity, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                  x:Name="ArrivalCityCmbBx"  Style="{StaticResource ComboBoxStyle}"/>
+
+                <TextBlock Text="Departure date time" Style="{StaticResource TextBlockStyle}"/>
+                <xctk:DateTimePicker Text="{Binding DepartureTime, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                x:Name="DateTimePicker" Margin="0,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" CalendarWidth="300" FontFamily="Arial" Height="25" Grid.Column="1" FontSize="10" Format="Custom" FormatString="yyyy-MM-dd hh:mm"/>
+
+                <TextBlock Text="Business seats price" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox Text="{Binding BusinessSeatsPrice, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                 x:Name="BusinessSeatPriceTxtBx" Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2">
+            <Button x:Name="AddFlightButton" Content="Add" Click="AddFlightButton_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="DeleteFlightButton" Content="Delete" Click="DeleteFlightButton_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="UpdateButton" Content="Update" Click="UpdateButton_Click" Style="{StaticResource ButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿TicketRegistration
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\voron\OneDrive\Рабочий стол\TicketRegistration\TicketRegistration\obj\Debug\net7.0-windows\
+TicketRegistration
+none
+false
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+
+14-1014949372
+
+25-1456970456
+230-1223396560
+Configuration\AdministrationsConfig\Pages\AdminManagePage.xaml;Configuration\AdministrationsConfig\Pages\CityRegistrationPage.xaml;Configuration\AdministrationsConfig\Pages\CountryRegistrationPage.xaml;Configuration\AdministrationsConfig\Pages\FlightRegistratrionPage.xaml;Configuration\AdministrationsConfig\Pages\MainAdminPage.xaml;Configuration\AdministrationsConfig\Pages\PlaneRegistrationPage.xaml;Configuration\MainWindow.xaml;Configuration\RegistrationConfig\Pages\UserAuthorizationPage.xaml;Configuration\RegistrationConfig\Pages\UserRegistrationPage.xaml;Configuration\RegistrationConfig\Pages\VerifyPhonePagexaml.xaml;Configuration\UsersConfig\MainUserPage.xaml;Configuration\UsersConfig\TicketChoosingWindow.xaml;Styles\PageStyleTemplate.xaml;App.xaml;
+
+True
+

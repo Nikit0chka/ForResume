@@ -1,0 +1,32 @@
+﻿<Page x:Class="TicketRegistration.CityRegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TicketRegistration"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="310" Background="Black"
+      Title="CityRegistrationPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="240"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Margin="10 10 0 0" Orientation="Vertical" HorizontalAlignment="Left">
+            <TextBlock Text="Country name" Style="{StaticResource TextBlockStyle}"/>
+            <ComboBox Text="{Binding CityRegCountry, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                 x:Name="CountryCombBx" Style="{StaticResource ComboBoxStyle}" DropDownClosed="CountryCombBx_SelectionChanged"/>
+            <TextBlock Text="City name" Style="{StaticResource TextBlockStyle}"/>
+            <ComboBox Text="{Binding CityRegCity, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                 x:Name="CityCombBx" Style="{StaticResource ComboBoxStyle}" />
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="AddCityButton" Content="Add" Click="AddCityButton_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="DeleteCityButton" Content="Delete" Click="DeleteCityButton_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="UpdateButton" Content="Update" Click="UpdateButton_Click" Style="{StaticResource ButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Page>
