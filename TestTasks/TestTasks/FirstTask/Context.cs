@@ -1,13 +1,14 @@
 ﻿using DataBaseModel;
 using Microsoft.EntityFrameworkCore;
 
-namespace Context;
+namespace DatBaseContext;
 
 internal class Context : DbContext
 {
     public DbSet<Device> Devices { get; set; }
     public DbSet<Mode> Modes { get; set; }
- 
+    public DbSet<Command> Commands { get; set; }
+
     public Context()
     {
         Database.EnsureCreated();

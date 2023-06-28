@@ -11,5 +11,15 @@ public class Mode
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public bool IsOn { get; set; }
+    public bool IsActive { get; set; }
+}
+
+public class Command
+{
+    public int Id { get; set; }
+    public Mode Mode { get; set; }
+    public int ModeId { get; set; }
+    public Device Device { get; set; }
+    public int DeviceId { get; set; }
+    public string Action { get; set; }
 }

@@ -20,6 +20,6 @@ internal class Program
         CommandHandlersController commandHandlersController = new CommandHandlersController(_handlers);
 
         foreach (var command in commands)
-            await commandHandlersController.StartHendlAsync(command.Split(';')[0], command.Split(';')[1]);
+            await commandHandlersController.StartHendlAsync(command.Split(';')[0], command.Split(';')[1]);    
     }
 }
